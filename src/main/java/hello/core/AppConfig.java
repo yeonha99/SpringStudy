@@ -17,7 +17,7 @@ public class AppConfig {
     @Bean
     public MemberService memberService(){
         return new MemberServiceimpl(memberRepository());
-    }//생성자 주입
+    }
     @Bean
     public MemberRepository memberRepository() {
         return new MemberMemberRepository();
@@ -25,7 +25,7 @@ public class AppConfig {
     @Bean
     public OrderService orderService(){
         return new OrderServiceimpl(memberRepository(),discountPolicy());
-    }//생성자 주입
+    }
     @Bean
     public DiscountPolicy discountPolicy(){
         return new RateDiscountPolicy();
